@@ -155,6 +155,7 @@ cython_debug/
 # PyCharm
 .idea/
 
+*tar.gz
 pp_cmd/
 storage/
 otl_v1_config.ini
