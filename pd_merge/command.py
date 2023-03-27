@@ -24,6 +24,8 @@ class PdMergeCommand(BaseCommand):
         if how is None:
             how = 'inner'
         on = self.get_arg('on').value.split(',')
-        copy = self.get_arg('copy') is True
+        copy = self.get_arg('copy').value
+        if copy is None:
+            copy = True
 
         return df.merge(right_df, how=how, on=on, copy=copy)
